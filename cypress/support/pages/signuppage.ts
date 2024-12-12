@@ -18,9 +18,9 @@ export class SignUpPage {
   }
 
   private static checkInterests() {
-    cy.contains('label.interest', 'Playwright').click();
-    cy.contains('label.interest', 'Cypress').click();
-    cy.contains('label.interest', 'Selenium').click();
+    cy.contains("label.interest", "Playwright").click();
+    cy.contains("label.interest", "Cypress").click();
+    cy.contains("label.interest", "Selenium").click();
   }
 
   private static selectFemale() {
@@ -37,9 +37,7 @@ export class SignUpPage {
   }
 
   private static verifySignUp() {
-    cy.contains('Signup successfully, Please login!').should('be.visible');
+    cy.contains("Signup successfully, Please login!").should("be.visible");
     cy.log("User signed Up successfully");
   }
-
-
 }
