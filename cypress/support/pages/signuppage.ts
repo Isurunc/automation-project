@@ -5,7 +5,7 @@ export class SignUpPage {
 
   static signUpNewUser() {
     cy.visit(Cypress.env("loginURL"));
-    cy.get('a[href="/signup"]').should("be.visible").click();
+    cy.get('a[href="/signup"]').should("be.visible", "Sign Up link should be visible").click();
     cy.get('input[name="name"]').clear().type(Cypress.env("Username"));
     cy.get('input[name="email"]').clear().type(Cypress.env("Email"));
     cy.get('input[id="password"]').clear().type(Cypress.env("Password"));
